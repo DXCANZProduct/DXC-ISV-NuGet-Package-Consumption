@@ -1,0 +1,55 @@
+name: $(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
+
+trigger:
+- none
+
+variables:
+  - group: mySecrets
+
+jobs:
+- job: PullDXCNugetPackages
+  displayName: 'Pull DXC Nuget Packages'
+  timeoutInMinutes: 360
+  pool:
+    name: 'azure pipelines'
+    vmImage: 'windows-latest'
+    demands: 
+    - DotNetFramework
+    - msbuild
+    - visualstudio
+  
+  steps:
+  # Authenticate and Restore Packages from DXC artifact feed
+  - task: DotNetCoreCLI@2
+    displayName: 'Authenticate and Restore Packages from DXC Artifact Feed'
+    inputs:
+      command: 'restore'
+      projects: 'DXCNuGetPackageConsumption.csproj'
+      feedsToUse: 'config'
+      nugetConfigPath: 'nuget.config'
+      externalFeedCredentials: 'DXCNugetFeed'
+      restoreDirectory: 'packages'
+  
+  # Add local Nuget source for pushing packages
+  - task: DotNetCoreCLI@2
+    displayName: 'Add Nuget source'
+    inputs:
+      command: 'custom'
+      custom: nuget
+      arguments: 'add source $(feedURL) --name "mysource" --username az --password $(token)'
+  
+  # Push Packages to local feed
+  - task: DotNetCoreCLI@2
+    displayName: 'Push packages to local feed'
+    inputs:
+      command: 'custom'
+      custom: nuget
+      arguments: 'push packages/dxc.*/*/*.nupkg --source mysource --api-key VSTS --skip-duplicate'
+  
+  #Delete files and packages
+  - task: DeleteFiles@1
+    displayName: 'Clean source folder'
+    inputs:
+      SourceFolder: '$(Build.SourcesDirectory)'
+      Contents: '**/*'
+      

@@ -1,1 +1,1 @@
-# DXC-ISV-NuGet-Package-Consumption
+# DXC ISV NuGet Package Consumption

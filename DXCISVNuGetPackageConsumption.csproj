@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net452</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+	</PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="DXC.Encryption" Version="10.0.35.*" TargetFramework="net452" />
+        <PackageReference Include="DXC.ICONBusinessProcessSuite" Version="10.0.35.*" TargetFramework="net452" />
+        <PackageReference Include="DXC.ICONCoreExtensions" Version="10.0.35.*" TargetFramework="net452" />
+        <PackageReference Include="DXC.ICONDocuSign" Version="10.0.35.*" TargetFramework="net452" />
+        <PackageReference Include="DXC.ICONEDI" Version="10.0.35.*" TargetFramework="net452" />
+        <PackageReference Include="DXC.ICONFinanceUtilities" Version="10.0.35.*" TargetFramework="net452" />
+        <PackageReference Include="DXC.ICONForex" Version="10.0.35.*" TargetFramework="net452" />
+        <PackageReference Include="DXC.ICONInsights" Version="10.0.35.*" TargetFramework="net452" />
+        <PackageReference Include="DXC.ICONItemCreation" Version="10.0.35.*" TargetFramework="net452" />
+        <PackageReference Include="DXC.ICONLicenseDXC" Version="10.0.35.1" TargetFramework="net452" />
+        <PackageReference Include="DXC.ICONLicenseSable" Version="10.0.35.*" TargetFramework="net452" />
+        <PackageReference Include="DXC.ICONPLM" Version="10.0.35.*" TargetFramework="net452" />
+        <PackageReference Include="DXC.ICONSmartSend" Version="10.0.35.*" TargetFramework="net452" />
+        <PackageReference Include="DXC.ICONSupportMaintenance" Version="10.0.35.*" TargetFramework="net452" />
+        <PackageReference Include="DXC.LicenseManager" Version="10.0.35.*" TargetFramework="net452" />
+    </ItemGroup>
+</Project>
