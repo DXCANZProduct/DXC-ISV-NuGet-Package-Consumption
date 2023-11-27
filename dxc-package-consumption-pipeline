@@ -24,7 +24,7 @@ jobs:
     displayName: 'Authenticate and Restore Packages from DXC Artifact Feed'
     inputs:
       command: 'restore'
-      projects: 'DXCNuGetPackageConsumption.csproj'
+      projects: 'DXCISVNuGetPackageConsumption.csproj'
       feedsToUse: 'config'
       nugetConfigPath: 'nuget.config'
       externalFeedCredentials: 'DXCNugetFeed'

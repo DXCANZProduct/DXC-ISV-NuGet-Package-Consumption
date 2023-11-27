@@ -5,20 +5,20 @@
         <Nullable>enable</Nullable>
 	</PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="DXC.Encryption" Version="10.0.35.*" TargetFramework="net452" />
-        <PackageReference Include="DXC.ICONBusinessProcessSuite" Version="10.0.35.*" TargetFramework="net452" />
-        <PackageReference Include="DXC.ICONCoreExtensions" Version="10.0.35.*" TargetFramework="net452" />
-        <PackageReference Include="DXC.ICONDocuSign" Version="10.0.35.*" TargetFramework="net452" />
-        <PackageReference Include="DXC.ICONEDI" Version="10.0.35.*" TargetFramework="net452" />
-        <PackageReference Include="DXC.ICONFinanceUtilities" Version="10.0.35.*" TargetFramework="net452" />
-        <PackageReference Include="DXC.ICONForex" Version="10.0.35.*" TargetFramework="net452" />
-        <PackageReference Include="DXC.ICONInsights" Version="10.0.35.*" TargetFramework="net452" />
-        <PackageReference Include="DXC.ICONItemCreation" Version="10.0.35.*" TargetFramework="net452" />
-        <PackageReference Include="DXC.ICONLicenseDXC" Version="10.0.35.1" TargetFramework="net452" />
-        <PackageReference Include="DXC.ICONLicenseSable" Version="10.0.35.*" TargetFramework="net452" />
-        <PackageReference Include="DXC.ICONPLM" Version="10.0.35.*" TargetFramework="net452" />
-        <PackageReference Include="DXC.ICONSmartSend" Version="10.0.35.*" TargetFramework="net452" />
-        <PackageReference Include="DXC.ICONSupportMaintenance" Version="10.0.35.*" TargetFramework="net452" />
-        <PackageReference Include="DXC.LicenseManager" Version="10.0.35.*" TargetFramework="net452" />
+        <PackageReference Include="DXC.Encryption" Version="*" />
+        <PackageReference Include="DXC.ICONBusinessProcessSuite" Version="*" />
+        <PackageReference Include="DXC.ICONCoreExtensions" Version="*" />
+        <PackageReference Include="DXC.ICONDocuSign" Version="*" />
+        <PackageReference Include="DXC.ICONEDI" Version="*" />
+        <PackageReference Include="DXC.ICONFinanceUtilities" Version="*" />
+        <PackageReference Include="DXC.ICONForex" Version="*" />
+        <PackageReference Include="DXC.ICONInsights" Version="*" />
+        <PackageReference Include="DXC.ICONItemCreation" Version="*" />
+        <PackageReference Include="DXC.ICONLicenseDXC" Version="*" />
+        <PackageReference Include="DXC.ICONLicenseSable" Version="*" />
+        <PackageReference Include="DXC.ICONPLM" Version="*" />
+        <PackageReference Include="DXC.ICONSmartSend" Version="*" />
+        <PackageReference Include="DXC.ICONSupportMaintenance" Version="*" />
+        <PackageReference Include="DXC.LicenseManager" Version="*" />
     </ItemGroup>
 </Project>
