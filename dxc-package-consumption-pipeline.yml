@@ -45,11 +45,3 @@ jobs:
       command: 'custom'
       custom: nuget
       arguments: 'push packages/dxc.*/*/*.nupkg --source mysource --api-key VSTS --skip-duplicate'
-  
-  #Delete files and packages
-  - task: DeleteFiles@1
-    displayName: 'Clean source folder'
-    inputs:
-      SourceFolder: '$(Build.SourcesDirectory)'
-      Contents: '**/*'
-      
