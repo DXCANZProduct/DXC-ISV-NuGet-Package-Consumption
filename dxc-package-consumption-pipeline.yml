@@ -1,5 +1,12 @@
 name: $(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
 
+schedules:
+- cron: '0 0 * * *'
+  displayName: Run once daily at midnight
+  branches:
+    include:
+      - main
+
 trigger:
 - none
 
